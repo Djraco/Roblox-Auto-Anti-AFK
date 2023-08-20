@@ -1,0 +1,14 @@
+2023-08-20 06:46:31,595 - INFO - Spawning message box
+2023-08-20 06:46:31,718 - INFO - Countdown: 30
+2023-08-20 06:46:32,722 - INFO - Countdown: 29
+2023-08-20 06:46:33,736 - INFO - Countdown: 28
+2023-08-20 06:46:34,738 - INFO - Countdown: 27
+2023-08-20 06:46:35,749 - INFO - Countdown: 26
+2023-08-20 06:46:36,662 - INFO - Asking how long until reprompt
+2023-08-20 06:46:36,755 - INFO - Countdown stopped or not at the end
+2023-08-20 06:46:39,660 - INFO - Reprompting in 1010 minutes
+2023-08-20 06:46:40,667 - INFO - Spawning message box
+2023-08-20 06:46:40,673 - INFO - Countdown: 30
+2023-08-20 06:46:41,689 - INFO - Countdown: 29
+2023-08-20 06:46:42,701 - INFO - Countdown: 28
+2023-08-20 06:46:43,326 - INFO - Starting AFK...
