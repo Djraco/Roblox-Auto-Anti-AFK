@@ -11,5 +11,5 @@ Automatically joins roblox games and starts an auto-farm while you are AFK.
 - Will try to reconnect to internet if needed **(soon)**
 ## Screenshots
 
-![Screenshot of the loader GUI](https://imgur.com/yYf1wH5)
+![Screenshot of the loader GUI](https://i.imgur.com/yYf1wH5.png)
 
