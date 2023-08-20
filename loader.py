@@ -10,7 +10,7 @@ timeout_event = None
 countdown_var = None
 running = True
 countdown_triggered_by_button = False
-log_file = "Logs/Loader/latest.txt"
+log_file = "Logs/Loader/latest.log"
 logging.basicConfig(filename=log_file, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Customizable variables
