@@ -2,6 +2,11 @@ import tkinter as tk
 from tkinter import ttk, simpledialog
 import threading
 import logging
+import configparser
+
+# Get configs
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 # Global variables
 message_box = None
@@ -10,11 +15,11 @@ timeout_event = None
 countdown_var = None
 running = True
 countdown_triggered_by_button = False
-log_file = "Logs/Loader/latest.log"
+log_file = config.get('Logs', 'loader_log_file')
 logging.basicConfig(filename=log_file, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Customizable variables
-countdown_time = 30
+
+countdown_time = config.getint('Loader', 'countdown_time_seconds')
 window_width = 300
 window_height = 140
 
