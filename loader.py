@@ -11,7 +11,7 @@ running = True
 countdown_triggered_by_button = False
 
 # Customizable variables
-countdown_time = 4
+countdown_time = 30
 window_width = 300
 window_height = 140
 
