@@ -3,6 +3,7 @@ from tkinter import ttk, simpledialog
 import threading
 import logging
 import configparser
+import os
 #import pyautogui
 
 # Get configs
@@ -18,7 +19,6 @@ running = True
 countdown_triggered_by_button = False
 log_file = config.get('Logs', 'loader_log_file')
 logging.basicConfig(filename=log_file, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 countdown_time = config.getint('Loader', 'countdown_time_seconds')
 window_width = 300
@@ -136,8 +136,16 @@ def start_message_box():
     message_box.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 def start_afk():
+    game_name = config.get('AFK', 'game')
+    try:
+        game_id = open("Scripts\\" + game_name + "\\gameid.txt", "r").readlines()[0]
+    except:
+        logging.error("Could not get game ID. Make sure 'game' in config.ini matches a valid game configuration.")
+        return
+
     logging.info("Starting AFK...")
 
+    os.system("start \"\"https://www.roblox.com/games/"+game_id)
 
 clear_log_file(log_file)
 
