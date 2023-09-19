@@ -3,6 +3,7 @@ from tkinter import ttk, simpledialog
 import threading
 import logging
 import configparser
+#import pyautogui
 
 # Get configs
 config = configparser.ConfigParser()
@@ -96,9 +97,6 @@ def on_cancel_button_click():
         logging.info("Reprompting in {} minute{}".format(minutes, ("s" if minutes != 1 else "")))
         root.after((minutes * 60 * 1000) if minutes != 1010 else 1000, start_message_box)
 
-def start_afk():
-    logging.info("Starting AFK...")
-
 def update_countdown(i):
     global countdown_triggered_by_button
     if i > 0 and running:
@@ -132,10 +130,14 @@ def start_message_box():
     try:
         create_message_box("Auto Anti AFK", f"Starting AFK in {countdown_time}...", [("Start now", on_start_button_click), ("Cancel", on_cancel_button_click)], show_close_button=False)
     except:
-        logging.error("Error spawning message box.")
+        logging.error("Error spawning message box:", Exception)
 
     x, y = calculate_message_box_position()
     message_box.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+def start_afk():
+    logging.info("Starting AFK...")
+
 
 clear_log_file(log_file)
 

@@ -1,1 +1,0 @@
-## Disable auto-reconnect in config.ini
